@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>PostrePro | Detalle Técnico</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/custom.css?v=3" />
+</head>
+
+<body>
+
+    <!-- Header lateral moderno -->
+    <header id="header">
+        <div class="inner">
+            <div class="logo-text">JL</div>
+
+            <div class="avatar-container">
+                <a href="index.html" class="image avatar"><img src="images/avatar.jpeg" alt="Jordi Delgado" /></a>
+            </div>
+            
+            <div class="profile-info">
+                <h1>Jordi Delgado</h1>
+                <h2>Ingeniero en Sistemas</h2>
+            </div>
+
+            <hr class="nav-divider">
+
+            <nav id="nav-menu">
+                <ul>
+                    <li>
+                        <a href="index.html" style="background-color: rgba(255,255,255,0.1); color: #ffffff;">
+                            <i class="icon solid fa-arrow-left"></i> <span>Volver al portafolio</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main (Contenido del proyecto) -->
+    <div id="main">
+        <section id="detalle-proyecto">
+            <header class="major" style="border-bottom: 2px solid #edf2f7; padding-bottom: 1em; margin-bottom: 2em;">
+                <h2 style="font-size: 2em; margin-bottom: 0.2em;">PostrePro: Costos y Pedidos</h2>
+                <p style="color: #5c6ac4; font-weight: 600; font-size: 1.1em; margin: 0;">Gestor Financiero para Emprendedores Gastronómicos</p>
+            </header>
+
+            <!-- 1. Título y Resumen del Proyecto -->
+            <h3>1. Resumen Técnico</h3>
+            <div class="table-wrapper" style="margin-bottom: 3em;">
+                <table class="alt">
+                    <tbody>
+                        <tr>
+                            <td style="width: 25%;"><strong>Rol</strong></td>
+                            <td>Desarrollador Mobile (Arquitectura, UI/UX, Backend Cloud y Monetización).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stack Core</strong></td>
+                            <td>Flutter, Dart, Arquitectura Cloud-first con tolerancia Offline.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Backend & BD</strong></td>
+                            <td>Firebase Cloud Firestore (NoSQL), Auth, Storage y Cloud Messaging.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gestión de Estado</strong></td>
+                            <td>ValueNotifier nativo para renderizado parcial (60 FPS) y StatefulWidget efímero.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Monetización</strong></td>
+                            <td>Unity LevelPlay Mediation (ironSource) gestionado mediante patrón Singleton.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lanzamiento</strong></td>
+                            <td>Junio 2026 (Protegida con ofuscación de código R8 contra ingeniería inversa).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 2. Descripción Técnica -->
+            <h3>2. Lógica de Negocio y Solución de Retos</h3>
+            <ul style="margin-bottom: 3em;">
+                <li style="margin-bottom: 1em;"><strong>Algoritmo de Costeo y Proyección:</strong> Desarrollo del motor matemático que calcula dinámicamente el costo fraccional de ingredientes, previniendo errores de punto flotante en micro-precios. El sistema proyecta la rentabilidad final sumando costos fijos/variables e integrando márgenes de ganancia para dictar precios por porción automatizados.</li>
+                <li style="margin-bottom: 1em;"><strong>Protección contra Tráfico Inválido (CTR y Ads):</strong> Resolución de problemas críticos de monetización ("Fat-finger effect") al cargar intersticiales. Diseñé un "Filtro de Desaceleración UX" con una barrera asíncrona (Future.delayed) que normalizó el CTR al estándar de la industria (2-5%) y protegió la cuenta de penalizaciones.</li>
+                <li><strong>Listas Reactivas Complejas:</strong> Implementación de mutaciones asíncronas en arrays de datos usando modales acoplados a <em>ValueListenableBuilder</em>. Esto permitió el recálculo total inmediato de la vista financiera sin generar cuellos de botella ni forzar rebuilds completos del árbol de widgets.</li>
+            </ul>
+
+            <!-- 3. Imágenes de la Interfaz -->
+            <h3>3. Diseño de Interfaz y Funcionalidad</h3>
+            <p>UI optimizada para agilizar la carga de datos masivos con manipulación dinámica mediante gestos <em>swipe</em> (Dismissible).</p>
+            <div class="row" style="margin-bottom: 3em;">
+                <div class="col-4 col-12-small">
+                    <!-- Recuerda subir 'postre_1.jpeg' -->
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/postre_1.jpeg" alt="Dashboard y Pedidos" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto; background-color: #f4f7f9; min-height: 200px;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Dashboard y Gestión de Pedidos</p>
+                </div>
+                <div class="col-4 col-12-small">
+                    <!-- Recuerda subir 'postre_2.jpeg' -->
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/postre_2.jpeg" alt="Calculadora Dinámica" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto; background-color: #f4f7f9; min-height: 200px;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Calculadora Dinámica de Costos</p>
+                </div>
+                <div class="col-4 col-12-small">
+                    <!-- Recuerda subir 'postre_3.jpeg' -->
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/postre_3.jpeg" alt="Proyección de Rentabilidad" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto; background-color: #f4f7f9; min-height: 200px;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Desglose y Rentabilidad</p>
+                </div>
+            </div>
+
+            <!-- 4. Logros -->
+            <h3>4. Logros y Métricas (Al Q3 2026)</h3>
+            <ul style="margin-bottom: 3em;">
+                <li style="margin-bottom: 0.8em;"><strong>Tracción del Mercado:</strong> Acumula más de 380 instalaciones orgánicas desde su lanzamiento (Junio 2026), validando la alta demanda de herramientas financieras en el nicho repostero.</li>
+                <li style="margin-bottom: 0.8em;"><strong>Engagement y Utilidad:</strong> Mantiene una base activa diaria (DAU/MAU) con un promedio sostenido de 29 usuarios activos recurrentes, utilizando el motor de cálculos a diario.</li>
+                <li><strong>Satisfacción del Usuario:</strong> Ostenta una calificación perfecta de 5.0 estrellas en Google Play Store, resultado directo de la optimización del rendimiento, prevención de errores (ANR) y una experiencia de usuario (UX) asíncrona muy fluida.</li>
+            </ul>
+
+            <!-- BOTÓN HACIA LA PLAY STORE -->
+            <ul class="actions" style="justify-content: center; margin-top: 2em;">
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.postrepro.app" target="_blank" class="button primary icon brands fa-google-play" style="padding: 0.8em 2em; font-size: 1.1em;">
+                        Descargar en Google Play
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="copyright">
+                <li>&copy; Jordi Delgado Lucas</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts Esenciales -->
+    <script src="assets/js/jquery.min.js"></script>
+
+</body>
+</html>

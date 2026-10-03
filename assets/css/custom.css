@@ -1,0 +1,411 @@
+/* =========================================================================
+   1. ESTRUCTURA BLINDADA (Panel Lateral y Contenido)
+   ========================================================================= */
+
+/* Desactivamos animaciones de entrada solo en los contenedores principales para evitar parpadeos */
+#header, #main {
+    transition: none !important;
+    animation: none !important;
+}
+
+@media screen and (min-width: 981px) {
+    #header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 320px !important;
+        height: 100vh !important;
+        z-index: 10000 !important;
+        overflow-y: auto !important;
+        padding: 2.5em 2em !important;
+    }
+    
+    #main {
+        position: relative !important;
+        margin-left: 320px !important;
+        width: calc(100% - 320px) !important;
+        max-width: none !important;
+        min-height: 100vh !important;
+        padding: 4em 5em !important; 
+        background-color: #f4f7f9 !important;
+    }
+}
+
+/* =========================================================================
+   2. ESTILOS VISUALES DEL PANEL LATERAL (HEADER COMPACTO)
+   ========================================================================= */
+
+#header {
+    background: linear-gradient(180deg, #1b233a 0%, #0d121e 100%) !important; 
+    text-align: left !important; 
+    display: flex;
+    flex-direction: column;
+}
+
+#header::-webkit-scrollbar { width: 6px; }
+#header::-webkit-scrollbar-thumb { background: #2b3553; border-radius: 10px; }
+#header::-webkit-scrollbar-track { background: transparent; }
+
+#header .inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%; 
+    align-items: flex-start;
+}
+
+.logo-text {
+    color: #879eed;
+    font-size: 1.8em; 
+    font-weight: 800;
+    margin-bottom: 0.3em; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.avatar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 0.6em; 
+}
+
+#header .image.avatar {
+    margin: 0;
+    width: 95px; 
+    height: 95px;
+    border: 3px solid #2e3a59; 
+    padding: 0; 
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#header .image.avatar img { border-radius: 50%; width: 100%; height: 100%; display: block; object-fit: cover;}
+
+.profile-info { text-align: left; width: 100%; }
+.profile-info h1 { color: #ffffff; font-size: 1.3em; font-weight: 700; margin: 0 0 0.1em 0; letter-spacing: -0.5px; line-height: 1.2; }
+.profile-info h2 { color: #a0aec0; font-size: 0.9em; font-weight: 500; margin: 0 0 0.2em 0; line-height: 1.2; }
+.profile-info p { color: #a0aec0; font-size: 0.8em; line-height: 1.4; margin: 0; }
+
+.nav-divider {
+    border: none;
+    border-top: 3px solid #5c6ac4; 
+    width: 40px;
+    margin: 1.2em 0; 
+    border-radius: 2px;
+}
+
+#nav-menu { width: 100%; }
+#nav-menu ul { list-style: none; padding: 0; margin: 0; }
+#nav-menu ul li { margin-bottom: 0.2em; padding: 0; border: none; }
+
+#nav-menu ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #a0aec0;
+    font-size: 0.95em; 
+    padding: 0.7em 1em; 
+    border-radius: 10px; 
+    transition: all 0.2s ease-in-out;
+    border-bottom: none;
+    font-weight: 500;
+    line-height: 1;
+}
+
+#nav-menu ul li a i:first-child { width: 24px; font-size: 1.15em; text-align: center; margin-right: 12px; }
+#nav-menu ul li a span { flex-grow: 1; text-align: left; }
+#nav-menu ul li a .arrow { display: none; font-size: 0.8em; margin-left: auto; }
+
+#nav-menu ul li a:hover { color: #ffffff; background-color: rgba(255, 255, 255, 0.05); }
+#nav-menu ul li a.active { background-color: #2b3553; color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+#nav-menu ul li a.active .arrow { display: block; }
+
+.sidebar-social {
+    list-style: none;
+    padding: 0;
+    margin-top: auto; 
+    padding-top: 1.2em; 
+    display: flex;
+    gap: 1.2em;
+}
+.sidebar-social li a { color: #a0aec0; font-size: 1.2em; border-bottom: none; transition: color 0.2s ease; }
+.sidebar-social li a:hover { color: #ffffff; }
+
+/* =========================================================================
+   3. ESTILOS MODERNOS PARA EL CONTENIDO PRINCIPAL (TARJETAS DERECHAS)
+   ========================================================================= */
+
+#main {
+    color: #4a5568; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+}
+
+#main > section {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.04);
+    padding: 3.5em;
+    margin-bottom: 2.5em;
+    border-top: none !important;
+}
+
+#main > section:first-child { margin-top: 0; }
+
+#main h2, #main h3 {
+    color: #1a202c; 
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+}
+
+#main > section > h2 {
+    display: inline-block;
+    border-bottom: 4px solid #5c6ac4; 
+    padding-bottom: 0.2em;
+    margin-bottom: 1.2em;
+    border-radius: 2px;
+    font-size: 1.75em; 
+}
+
+#inicio header h2 {
+    border-bottom: none;
+    font-size: 2.4em;
+    line-height: 1.3;
+    margin-bottom: 0.5em;
+}
+
+#main p {
+    color: #4a5568;
+    line-height: 1.8;
+    font-size: 1.05em;
+    margin-bottom: 1.5em;
+}
+
+#main .button.primary {
+    background-color: #5c6ac4 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(92, 106, 196, 0.2);
+    transition: all 0.3s ease;
+    border: none !important;
+    font-size: 1em;
+}
+
+#main .button.primary:hover {
+    background-color: #4b57a6 !important;
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 15px rgba(92, 106, 196, 0.3);
+}
+
+#main .button {
+    border-radius: 8px !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+#main .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* =========================================================================
+   4. ADAPTABILIDAD MÓVIL (RESPONSIVE)
+   ========================================================================= */
+
+@media screen and (max-width: 980px) {
+    body { padding: 0 !important; margin: 0 !important; }
+    
+    #header { 
+        position: relative !important; width: 100% !important; height: auto !important; 
+        min-height: auto !important; padding: 2.5em 1.5em !important; overflow: visible !important;
+        margin: 0 !important; border-radius: 0 !important; 
+    }
+    
+    #header .inner { align-items: center !important; text-align: center !important; }
+    .profile-info { text-align: center !important; }
+    .logo-text { text-align: center !important; margin: 0 auto 0.5em auto !important; font-size: 1.5em !important; }
+    #header .image.avatar { width: 80px !important; height: 80px !important; margin: 0 auto 0.8em auto !important; }
+    .profile-info h1 { font-size: 1.2em !important; }
+    .profile-info h2 { font-size: 0.85em !important; }
+    .profile-info p { font-size: 0.8em !important; }
+    .nav-divider { margin: 1.2em auto !important; }
+    
+    #nav-menu ul { display: flex !important; flex-wrap: wrap !important; justify-content: center !important; gap: 0.6em 0.3em !important; width: 100% !important; }
+    #nav-menu ul li { margin: 0 !important; }
+    #nav-menu ul li a { padding: 0.6em 0.9em !important; font-size: 0.85em !important; background-color: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); }
+    #nav-menu ul li a i:first-child { display: none !important; } 
+    .sidebar-social { justify-content: center !important; margin-top: 2em !important; }
+
+    #main { position: relative !important; width: 100% !important; margin-left: 0 !important; padding: 1.5em 1em !important; max-width: none !important; }
+    #main > section { padding: 2em 1.5em !important; margin-bottom: 1.5em !important; border-radius: 12px !important; }
+    #inicio header h2 { font-size: 1.8em !important; }
+    #main > section > h2 { font-size: 1.5em !important; }
+}
+
+/* =========================================================================
+   6. ESTILOS PARA LAS TARJETAS DE HABILIDADES (TIPO PROGRESS BAR)
+   ========================================================================= */
+
+.skill-category-title { color: #2b6cb0 !important; font-size: 1.4em !important; margin-top: 1.5em !important; margin-bottom: 1em !important; font-weight: 700 !important; }
+.skill-card-container { display: flex !important; flex-wrap: wrap !important; gap: 15px !important; margin-bottom: 2em !important; }
+.skill-card { display: flex !important; align-items: center !important; background-color: #ffffff !important; border: 1px solid #e2e8f0 !important; border-radius: 8px !important; padding: 12px 18px !important; box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important; min-width: 200px !important; flex: 1 1 200px !important; transition: transform 0.2s ease, box-shadow 0.2s ease !important; }
+.skill-card:hover { transform: translateY(-3px) !important; box-shadow: 0 6px 12px rgba(0,0,0,0.08) !important; }
+.skill-icon { font-size: 1.8em !important; color: #5c6ac4 !important; margin-right: 15px !important; width: 30px !important; text-align: center !important; }
+.skill-info { display: flex !important; flex-direction: column !important; justify-content: center !important; flex-grow: 1 !important; }
+.skill-name { font-weight: 600 !important; font-size: 0.9em !important; color: #2d3748 !important; margin-bottom: 8px !important; }
+.skill-bar-bg { width: 100% !important; height: 6px !important; background-color: #edf2f7 !important; border-radius: 3px !important; overflow: hidden !important; }
+.skill-bar-fill { height: 100% !important; background-color: #3182ce !important; border-radius: 3px !important; }
+
+/* =========================================================================
+   7. ESTILOS PARA LA LÍNEA DE TIEMPO (EXPERIENCIA PROFESIONAL)
+   ========================================================================= */
+
+.timeline { position: relative !important; margin-top: 2em !important; padding-left: 1.5em !important; }
+.timeline::before { content: '' !important; position: absolute !important; left: 0 !important; top: 0 !important; height: 100% !important; width: 3px !important; background-color: #e2e8f0 !important; border-radius: 3px !important; }
+.timeline-item { position: relative !important; margin-bottom: 2.5em !important; }
+.timeline-item:last-child { margin-bottom: 0 !important; }
+.timeline-dot { position: absolute !important; left: -1.95em !important; top: 5px !important; width: 16px !important; height: 16px !important; background-color: #5c6ac4 !important; border-radius: 50% !important; border: 3px solid #ffffff !important; box-shadow: 0 0 0 3px #e2e8f0 !important; z-index: 1 !important; transition: background-color 0.3s ease !important; }
+.timeline-item:hover .timeline-dot { background-color: #4b57a6 !important; box-shadow: 0 0 0 3px #c3dafe !important; }
+.timeline-content { background-color: #ffffff !important; border: 1px solid #e2e8f0 !important; border-radius: 12px !important; padding: 1.5em !important; box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important; transition: transform 0.2s ease, box-shadow 0.2s ease !important; }
+.timeline-item:hover .timeline-content { transform: translateY(-3px) !important; box-shadow: 0 6px 15px rgba(0,0,0,0.06) !important; }
+.timeline-content h3 { color: #1a202c !important; font-size: 1.25em !important; margin-bottom: 0.2em !important; border-bottom: none !important; }
+.timeline-date { display: inline-block !important; font-size: 0.85em !important; font-weight: 600 !important; color: #5c6ac4 !important; background-color: #ebf4ff !important; padding: 0.3em 0.8em !important; border-radius: 6px !important; margin-bottom: 1.2em !important; }
+.timeline-content ul { list-style-type: none !important; padding-left: 0 !important; margin: 0 !important; }
+.timeline-content ul li { position: relative !important; padding-left: 1.5em !important; margin-bottom: 0.6em !important; font-size: 0.95em !important; color: #4a5568 !important; line-height: 1.6 !important; }
+.timeline-content ul li::before { content: '▹' !important; position: absolute !important; left: 0 !important; color: #5c6ac4 !important; font-weight: bold !important; }
+
+/* =========================================================================
+   8. ESTILOS PARA CERTIFICACIONES
+   ========================================================================= */
+
+.cert-grid { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; gap: 1.5em !important; margin-top: 1.5em !important; }
+.cert-card { background-color: #ffffff !important; border: 1px solid #e2e8f0 !important; border-radius: 12px !important; padding: 1.5em !important; display: flex !important; align-items: flex-start !important; gap: 1.2em !important; transition: all 0.3s ease !important; box-shadow: 0 2px 5px rgba(0,0,0,0.02) !important; }
+.cert-card:hover { transform: translateY(-4px) !important; box-shadow: 0 8px 15px rgba(0,0,0,0.06) !important; border-color: #c3dafe !important; }
+.cert-icon { font-size: 2.2em !important; color: #5c6ac4 !important; margin-top: 5px !important; }
+.cert-info { display: flex !important; flex-direction: column !important; align-items: flex-start !important; }
+.cert-info h4 { font-size: 1.05em !important; color: #2d3748 !important; margin-bottom: 0.3em !important; line-height: 1.3 !important; border-bottom: none !important; }
+.cert-date { font-size: 0.8em !important; color: #718096 !important; margin-bottom: 1em !important; font-weight: 500 !important; }
+.cert-info .button.small { padding: 0.4em 0.8em !important; font-size: 0.8em !important; border-radius: 6px !important; background-color: transparent !important; color: #5c6ac4 !important; border: 1px solid #5c6ac4 !important; box-shadow: none !important; }
+.cert-info .button.small:hover { background-color: #5c6ac4 !important; color: #ffffff !important; }
+
+/* =========================================================================
+   9. ESTILOS PARA TARJETAS DE PROYECTOS (PROJECT CARDS)
+   ========================================================================= */
+
+.project-card {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02) !important;
+}
+
+.project-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 20px rgba(0,0,0,0.08) !important;
+    border-color: #c3dafe !important;
+}
+
+/* Enlaces limpios en imagen y título */
+.project-link {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    display: block !important;
+    color: inherit !important;
+}
+
+.title-link h3 { transition: color 0.2s ease !important; }
+.title-link:hover h3 { color: #5c6ac4 !important; }
+
+/* Contenedor de la imagen superior (Compacto) */
+.project-img-container {
+    background-color: #f8fafc !important;
+    padding: 1.2em 1em !important; 
+    text-align: center !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+/* Imagen del logo (Compacta) */
+.project-img {
+    width: 100px !important; 
+    height: 100px !important;
+    object-fit: contain !important; 
+    border-radius: 18px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05) !important;
+}
+
+/* Contenido de texto inferior */
+.project-content {
+    padding: 1.5em !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+}
+
+.project-content h3 {
+    font-size: 1.25em !important;
+    color: #1a202c !important;
+    margin-bottom: 0.5em !important;
+    border-bottom: none !important;
+}
+
+.project-content p {
+    font-size: 0.9em !important;
+    color: #4a5568 !important;
+    margin-bottom: 1.2em !important;
+    line-height: 1.6 !important;
+    flex-grow: 1 !important;
+}
+
+/* ESTILOS DE LAS ETIQUETAS RESTAURADOS (Flutter, Dart, etc) */
+.project-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5em !important;
+    margin-bottom: 1.5em !important;
+}
+
+.project-tags span {
+    background-color: #ebf4ff !important;
+    color: #4c51bf !important;
+    font-size: 0.75em !important;
+    font-weight: 600 !important;
+    padding: 0.3em 0.8em !important;
+    border-radius: 6px !important;
+    border: 1px solid #c3dafe !important;
+}
+
+/* Fila de botones compacta */
+.project-links {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0.5em !important; 
+    flex-wrap: wrap !important;
+    margin-top: auto !important; 
+}
+
+.project-links .button.small {
+    padding: 0.4em 0.5em !important; 
+    font-size: 0.8em !important;
+    margin: 0 !important;
+    flex-grow: 1 !important; 
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}

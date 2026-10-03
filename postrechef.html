@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>PostreChef | Detalle Técnico</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/custom.css?v=3" />
+</head>
+
+<body>
+
+    <!-- Header lateral moderno -->
+    <header id="header">
+        <div class="inner">
+            <div class="logo-text">JL</div>
+
+            <div class="avatar-container">
+                <a href="index.html" class="image avatar"><img src="images/avatar.jpeg" alt="Jordi Delgado" /></a>
+            </div>
+            
+            <div class="profile-info">
+                <h1>Jordi Delgado</h1>
+                <h2>Ingeniero en Sistemas</h2>
+            </div>
+
+            <hr class="nav-divider">
+
+            <nav id="nav-menu">
+                <ul>
+                    <li>
+                        <a href="index.html" style="background-color: rgba(255,255,255,0.1); color: #ffffff;">
+                            <i class="icon solid fa-arrow-left"></i> <span>Volver al portafolio</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main (Contenido del proyecto) -->
+    <div id="main">
+        <section id="detalle-proyecto">
+            <header class="major" style="border-bottom: 2px solid #edf2f7; padding-bottom: 1em; margin-bottom: 2em;">
+                <h2 style="font-size: 2em; margin-bottom: 0.2em;">PostreChef: Recetario Inteligente</h2>
+                <p style="color: #5c6ac4; font-weight: 600; font-size: 1.1em; margin: 0;">App Offline-First con Sincronización Cloud y Comunidad</p>
+            </header>
+
+            <!-- 1. Título y Resumen del Proyecto -->
+            <h3>1. Resumen Técnico</h3>
+            <div class="table-wrapper" style="margin-bottom: 3em;">
+                <table class="alt">
+                    <tbody>
+                        <tr>
+                            <td style="width: 25%;"><strong>Rol</strong></td>
+                            <td>Desarrollador Full Stack Mobile (Arquitectura, UI/UX, Backend).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stack Core</strong></td>
+                            <td>Flutter, Dart (Configuración Kotlin DSL en Android).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Backend & Auth</strong></td>
+                            <td>Firebase (OAuth Google Sign-In, Cloud Storage, Cloud Messaging, Crashlytics).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rendimiento UI</strong></td>
+                            <td>Uso de <em>IndexedStack</em> para navegación en memoria y <em>Wakelock</em> nativo.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Monetización</strong></td>
+                            <td>Yandex Mobile Ads integrado mediante patrón Singleton.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lanzamiento</strong></td>
+                            <td>Marzo 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 2. Descripción Técnica -->
+            <h3>2. Lógica de Negocio y Arquitectura</h3>
+            <ul style="margin-bottom: 3em;">
+                <li style="margin-bottom: 1em;"><strong>Arquitectura Escalable (Local a Cloud):</strong> Sistema híbrido que permite interacción inmediata sin registro usando <em>shared_preferences</em> (Modo Invitado). Al iniciar sesión (OAuth), un algoritmo migra la data local del usuario hacia Firebase de forma transparente para evitar pérdida de datos.</li>
+                <li style="margin-bottom: 1em;"><strong>Motor de Cálculo y Conversión:</strong> Desarrollo de una calculadora matemática dinámica que recalcula gramajes en tiempo real según el número de comensales, integrando un conversor de sistemas métricos (tazas a gramos) y un "Gestor Inteligente de Compras" con operaciones CRUD locales.</li>
+                <li><strong>Optimización de Navegación:</strong> Implementación de <em>IndexedStack</em> para el Bottom Navigation Bar. Esto mantiene las vistas principales vivas en memoria, anulando recargas innecesarias de UI o múltiples lecturas a la base de datos al cambiar de pestañas.</li>
+            </ul>
+
+            <!-- 3. Imágenes de la Interfaz -->
+            <h3>3. Interfaz y Experiencia de Usuario (UX)</h3>
+            <p>Diseño centrado en la usabilidad culinaria, incluyendo un "Modo Cocina" (Wakelock) que interactúa con el sistema operativo para anular el tiempo de apagado de pantalla.</p>
+            <div class="row" style="margin-bottom: 3em;">
+                <div class="col-4 col-12-small">
+                    <!-- Sube la captura chef_1.jpeg a images/thumbs/ -->
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/chef_1.png" alt="Dashboard Recetas" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto; background-color: #f4f7f9; min-height: 200px;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Directorio de Recetas</p>
+                </div>
+                <div class="col-4 col-12-small">
+                    <!-- Sube la captura chef_2.jpeg a images/thumbs/ -->
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/chef_2.png" alt="Detalle y Conversor" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto; background-color: #f4f7f9; min-height: 200px;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Calculadora de Comensales</p>
+                </div>
+                <div class="col-4 col-12-small">
+                    <!-- Sube la captura chef_3.jpeg a images/thumbs/ -->
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/chef_3.png" alt="Lista de Compras" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto; background-color: #f4f7f9; min-height: 200px;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Gestor de Compras CRUD</p>
+                </div>
+            </div>
+
+            <!-- 4. Retos Técnicos y Soluciones -->
+            <h3>4. Resolución de Conflictos Técnicos</h3>
+            <ul style="margin-bottom: 3em;">
+                <li style="margin-bottom: 1em;"><strong>Conflictos de Ofuscación R8 vs SDKs Nativos:</strong> Al compilar para producción, el motor R8 destruía referencias necesarias para Firebase y Yandex Ads. Diseñé reglas granulares estrictas en <em>ProGuard (proguard-rules.pro)</em> para ofuscar el 100% de la lógica Dart y aislar los componentes nativos, eliminando fallas en tiempo de ejecución.</li>
+                <li><strong>Ciclo de Vida en UI Asíncrona:</strong> La inyección de modales de "Novedades" en el <em>initState</em> generaba desbordamientos. Resolví esto implementando temporizadores asíncronos (<em>Future.delayed</em>) condicionados a validaciones estrictas de estado (<em>if (mounted)</em>), garantizando un renderizado seguro.</li>
+            </ul>
+
+            <!-- 5. Logros -->
+            <h3>5. Tracción y Resultados (Q3 2026)</h3>
+            <ul style="margin-bottom: 3em;">
+                <li style="margin-bottom: 0.8em;"><strong>Fuerte Adopción:</strong> Acumula más de 2,930 instalaciones desde su lanzamiento (Marzo 2026), probando la efectividad del sistema <em>offline-first</em> como gancho de retención.</li>
+                <li style="margin-bottom: 0.8em;"><strong>Comunidad Activa:</strong> Promedia 45 usuarios activos, validando las estrategias de push notifications (FCM) y la interacción sin fricciones.</li>
+                <li><strong>Calificación Óptima:</strong> Calificación sostenida de 5.0 estrellas en Google Play Store gracias al rendimiento sin bloqueos y tiempos de carga instantáneos asegurados por la gestión en memoria.</li>
+            </ul>
+
+            <!-- BOTÓN HACIA LA PLAY STORE -->
+            <ul class="actions" style="justify-content: center; margin-top: 2em;">
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.jordidelgado.recetaspostres" target="_blank" class="button primary icon brands fa-google-play" style="padding: 0.8em 2em; font-size: 1.1em;">
+                        Descargar en Google Play
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="copyright">
+                <li>&copy; Jordi Delgado Lucas</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts Esenciales -->
+    <script src="assets/js/jquery.min.js"></script>
+
+</body>
+</html>

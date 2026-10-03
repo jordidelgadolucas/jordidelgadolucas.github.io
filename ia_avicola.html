@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>IA Avícola | Detalle Técnico</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/custom.css?v=3" />
+</head>
+
+<body>
+
+    <!-- Header lateral moderno -->
+    <header id="header">
+        <div class="inner">
+            <div class="logo-text">JL</div>
+
+            <div class="avatar-container">
+                <a href="index.html" class="image avatar"><img src="images/avatar.jpeg" alt="Jordi Delgado" /></a>
+            </div>
+            
+            <div class="profile-info">
+                <h1>Jordi Delgado</h1>
+                <h2>Ingeniero en Sistemas</h2>
+            </div>
+
+            <hr class="nav-divider">
+
+            <nav id="nav-menu">
+                <ul>
+                    <li>
+                        <a href="index.html" style="background-color: rgba(255,255,255,0.1); color: #ffffff;">
+                            <i class="icon solid fa-arrow-left"></i> <span>Volver al portafolio</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main (Contenido del proyecto) -->
+    <div id="main">
+        <section id="detalle-proyecto">
+            <header class="major" style="border-bottom: 2px solid #edf2f7; padding-bottom: 1em; margin-bottom: 2em;">
+                <h2 style="font-size: 2em; margin-bottom: 0.2em;">IA: Detección de Enfermedades Avícolas</h2>
+                <p style="color: #5c6ac4; font-weight: 600; font-size: 1.1em; margin: 0;">Redes Neuronales Convolucionales (CNN) y Visión Computacional</p>
+            </header>
+
+            <!-- 1. Título y Resumen del Proyecto -->
+            <h3>1. Resumen Técnico</h3>
+            <div class="table-wrapper" style="margin-bottom: 3em;">
+                <table class="alt">
+                    <tbody>
+                        <tr>
+                            <td style="width: 25%;"><strong>Rol</strong></td>
+                            <td>Data Scientist & Investigador (Proyecto de Tesis de Maestría).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stack Core</strong></td>
+                            <td>Python, PyTorch, Keras, OpenCV.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modelos de IA</strong></td>
+                            <td>YOLOv8n (Localización) y MobileNetV2 (Clasificación).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Patologías Evaluadas</strong></td>
+                            <td>Coccidiosis, Newcastle Disease, Salmonelosis.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Métrica Principal</strong></td>
+                            <td>Exactitud (Accuracy) de Clasificación del <strong>98.34%</strong>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Infraestructura</strong></td>
+                            <td>Entrenamiento en GPU NVIDIA Tesla T4 (Google Colab).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 2. Descripción Técnica -->
+            <h3>2. Planteamiento y Arquitectura del Sistema</h3>
+            <ul style="margin-bottom: 3em;">
+                <li style="margin-bottom: 1em;"><strong>El Problema (Múltiples Instancias):</strong> Los métodos tradicionales (RT-PCR) son costosos y de alta latencia. Por otro lado, los clasificadores simples fallaban en entornos reales de granja porque una sola imagen puede contener múltiples muestras fecales mezcladas con fondos ruidosos (tierra, cascarilla de arroz).</li>
+                <li style="margin-bottom: 1em;"><strong>Arquitectura de Dos Etapas:</strong> Para solucionar esto, diseñé un pipeline secuencial. Primero, el detector <em>YOLOv8n</em> escanea la imagen completa y genera cajas delimitadoras para aislar cada muestra fecal. Luego, la imagen recortada se redimensiona y se pasa a la red convolucional para su diagnóstico individual.</li>
+                <li><strong>Selección de CNN:</strong> Se entrenaron y evaluaron comparativamente arquitecturas como ResNet18, EfficientNetB0, ConvNeXt y MobileNetV2. Se eligió <strong>MobileNetV2</strong> como el modelo óptimo al lograr la máxima precisión y el menor tiempo de inferencia (92ms por imagen), siendo ideal para un futuro despliegue on-device (dispositivos móviles).</li>
+            </ul>
+
+            <!-- 3. Imágenes de la Interfaz -->
+            <h3>3. Entrenamiento y Resultados Visuales</h3>
+            <p>El modelo fue entrenado con un dataset híbrido de miles de imágenes, aplicando técnicas de aumento de datos y Sobremuestreo Aleatorio (Random Oversampling) para balancear las clases.</p>
+            <div class="row" style="margin-bottom: 3em;">
+                <div class="col-4 col-12-small">
+                    <!-- Sube la captura ia_1.jpeg a images/thumbs/ -->
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/ia_1.png" alt="Curvas de Aprendizaje" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto; background-color: #f4f7f9; min-height: 200px; object-fit: contain;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Gráficas de Entrenamiento y Matriz de Confusión</p>
+                </div>
+                <div class="col-4 col-12-small">
+                    <!-- Sube la captura ia_2.jpeg a images/thumbs/ -->
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/ia_2.png" alt="Detección YOLOv8" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto; background-color: #f4f7f9; min-height: 200px; object-fit: contain;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Detección y Cajas Delimitadoras (YOLOv8)</p>
+                </div>
+                <div class="col-4 col-12-small">
+                    <!-- Sube la captura ia_3.jpeg a images/thumbs/ -->
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/ia_3.png" alt="Arquitectura del Sistema" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto; background-color: #f4f7f9; min-height: 200px; object-fit: contain;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Arquitectura del Flujo de Procesamiento</p>
+                </div>
+            </div>
+
+            <!-- 4. Logros -->
+            <h3>4. Logros Científicos y Conclusiones</h3>
+            <ul style="margin-bottom: 3em;">
+                <li style="margin-bottom: 0.8em;"><strong>Precisión Clínica:</strong> El clasificador CNN alcanzó un F1-Score de 0.986 y una exactitud del 98.34%, demostrando que la Inteligencia Artificial puede identificar patologías de forma temprana y no invasiva.</li>
+                <li style="margin-bottom: 0.8em;"><strong>Viabilidad Local:</strong> Se validó el sistema de extremo a extremo utilizando 200 imágenes de prueba tomadas directamente en granjas avícolas de Portoviejo (Ecuador), probando su resistencia a la oclusión y variaciones de luz (abismo de generalización).</li>
+                <li><strong>Eficiencia Computacional:</strong> Al pesar tan solo 9.1 MB, el modelo desarrollado sienta las bases para ser empaquetado en una aplicación móvil offline, permitiendo democratizar el acceso a la tecnología sanitaria a los productores de traspatio.</li>
+            </ul>
+
+            <!-- BOTÓN A GITHUB -->
+            <ul class="actions" style="justify-content: center; margin-top: 2em;">
+                <li>
+                    <a href="https://github.com/jordidelgadolucas/Clasificacion-Enfermedades-Avicolas-CNN" target="_blank" class="button primary icon brands fa-github" style="padding: 0.8em 2em; font-size: 1.1em;">
+                        Ver Repositorio y Código Fuente
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="copyright">
+                <li>&copy; Jordi Delgado Lucas</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+
+</body>
+</html>

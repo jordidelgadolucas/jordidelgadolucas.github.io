@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Incubadora Pro | Detalle Técnico</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <!-- Aseguramos la carga de iconos -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <!-- Estilos base -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- NUESTROS ESTILOS MODERNOS (La clave del nuevo diseño) -->
+    <link rel="stylesheet" href="assets/css/custom.css?v=3" />
+</head>
+
+<!-- ELIMINAMOS LA CLASE is-preload PARA MATAR EL PARPADEO -->
+<body>
+
+    <!-- Header lateral moderno (Adaptado para sub-página) -->
+    <header id="header">
+        <div class="inner">
+            <div class="logo-text">JL</div>
+
+            <div class="avatar-container">
+                <a href="index.html" class="image avatar"><img src="images/avatar.jpeg" alt="Jordi Delgado" /></a>
+            </div>
+            
+            <div class="profile-info">
+                <h1>Jordi Delgado</h1>
+                <h2>Ingeniero en Sistemas</h2>
+            </div>
+
+            <hr class="nav-divider">
+
+            <!-- Menú de navegación simplificado para volver atrás -->
+            <nav id="nav-menu">
+                <ul>
+                    <li>
+                        <a href="index.html" style="background-color: rgba(255,255,255,0.1); color: #ffffff;">
+                            <i class="icon solid fa-arrow-left"></i> <span>Volver al portafolio</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main (Contenido del proyecto envuelto en nuestra tarjeta moderna) -->
+    <div id="main">
+        <section id="detalle-proyecto">
+            <header class="major" style="border-bottom: 2px solid #edf2f7; padding-bottom: 1em; margin-bottom: 2em;">
+                <h2 style="font-size: 2em; margin-bottom: 0.2em;">Incubadora Pro: Avicultura</h2>
+                <p style="color: #5c6ac4; font-weight: 600; font-size: 1.1em; margin: 0;">Sistema Móvil de Gestión Avícola</p>
+            </header>
+
+            <!-- 1. Título y Resumen del Proyecto -->
+            <h3>1. Resumen del Proyecto</h3>
+            <div class="table-wrapper" style="margin-bottom: 3em;">
+                <table class="alt">
+                    <tbody>
+                        <tr>
+                            <td style="width: 25%;"><strong>Rol</strong></td>
+                            <td>Desarrollador Mobile Independiente (Arquitectura, UI/UX, Desarrollo y Publicación).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tecnologías Principales</strong></td>
+                            <td>Flutter, Dart, Arquitectura Offline-first.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Herramientas</strong></td>
+                            <td>Visual Studio Code, Android Studio.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Monetización</strong></td>
+                            <td>Integración de redes publicitarias (Yandex Ads, Unity LevelPlay) mediante mediación.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fecha de Publicación</strong></td>
+                            <td>Julio 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Estado</strong></td>
+                            <td>Publicada en producción en Google Play Store (ofuscación de código R8 habilitada).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 2. Descripción Técnica -->
+            <h3>2. Arquitectura y Retos Técnicos</h3>
+            <ul style="margin-bottom: 3em;">
+                <li style="margin-bottom: 1em;"><strong>Arquitectura Offline-First:</strong> La aplicación está diseñada para funcionar sin conexión a internet, garantizando que los avicultores en zonas rurales puedan gestionar sus lotes, calcular tiempos de ovoscopia, paradas de volteo y nacimientos sin depender de la conectividad.</li>
+                <li style="margin-bottom: 1em;"><strong>Optimización de Rendimiento (Android Vitals):</strong> Identificación y resolución de cuellos de botella en la memoria RAM (errores ANR por <em>Input dispatching timed out</em>) en dispositivos de gama media. Implementación de técnicas de downsampling y control de caché de imágenes interactuando directamente con el motor BitmapFactory de Android para mantener 60 FPS en el renderizado.</li>
+                <li><strong>Gestión del Ciclo de Vida y Empaquetado:</strong> Configuración avanzada de Gradle (AGP 8.7.0), resolución de dependencias de terceros y ofuscación de código para cumplir con los estándares de seguridad y peso del Android App Bundle (.aab) exigidos por Google.</li>
+            </ul>
+
+            <!-- 3. Imágenes de la Interfaz -->
+            <h3>3. Diseño de Interfaz (UI/UX)</h3>
+            <p>Interfaces limpias orientadas a la experiencia del usuario, el manejo de listas dinámicas y visualización matemática de fechas.</p>
+            <div class="row" style="margin-bottom: 3em;">
+                <div class="col-4 col-12-small">
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/app_1.jpeg" alt="Dashboard" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Dashboard Principal</p>
+                </div>
+                <div class="col-4 col-12-small">
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/app_2.jpeg" alt="Cronograma" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Cálculo de Cronograma</p>
+                </div>
+                <div class="col-4 col-12-small">
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/app_3.jpeg" alt="Sanidad" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 80%; margin: 0 auto;" /></span>
+                    <p style="text-align:center; font-size: 0.85em; margin-top: 15px; font-weight: 500;">Módulo de Sanidad (UX)</p>
+                </div>
+            </div>
+
+            <!-- 4. Capturas de Google Play Console -->
+            <h3>4. Gestión en Producción (Google Play Console)</h3>
+            <p>Administración directa de despliegues, métricas de rendimiento y ecosistema de monetización bajo la cuenta de desarrollador Jordi Pro.</p>
+            <div class="row" style="margin-bottom: 3em;">
+                <div class="col-12">
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/console_1.png" alt="Consola Versiones" style="border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 75%; margin: 0 auto;" /></span>
+                    <p style="text-align:center; font-size: 0.9em; margin-top: 15px; margin-bottom: 30px; font-weight: 500;">Gestión de Versiones y Despliegues en Producción</p>
+                </div>
+                <div class="col-12">
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/console_2.png" alt="Monetización" style="border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 75%; margin: 0 auto;" /></span>
+                    <p style="text-align:center; font-size: 0.9em; margin-top: 15px; margin-bottom: 30px; font-weight: 500;">Análisis de Rendimiento y Monetización Activa</p>
+                </div>
+                <div class="col-12">
+                    <span class="image fit" style="text-align: center;"><img src="images/thumbs/console_3.png" alt="Android Vitals" style="border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 75%; margin: 0 auto;" /></span>
+                    <p style="text-align:center; font-size: 0.9em; margin-top: 15px; margin-bottom: 30px; font-weight: 500;">Métricas Generales y Retención de Usuarios</p>
+                </div>
+            </div>
+
+            <!-- 5. Logros -->
+            <h3>5. Logros y Resultados</h3>
+            <ul style="margin-bottom: 3em;">
+                <li style="margin-bottom: 0.8em;"><strong>Adopción del producto:</strong> La aplicación ha alcanzado 756 instalaciones totales, validando la necesidad del mercado avícola.</li>
+                <li style="margin-bottom: 0.8em;"><strong>Alta retención:</strong> Mantiene un crecimiento constante con un promedio de 330 dispositivos activos y 273 usuarios activos por mes (MAU), lo que demuestra la utilidad continua del software.</li>
+                <li style="margin-bottom: 0.8em;"><strong>Excelente recepción:</strong> Ostenta una calificación impecable de 4.87 estrellas en Google Play, reflejando una excelente Experiencia de Usuario (UX) y estabilidad.</li>
+                <li><strong>Estabilidad técnica:</strong> Resolución proactiva de problemas de compatibilidad y optimización de Android Vitals, logrando reducir la tasa de fallas (crash rate) prácticamente a cero.</li>
+            </ul>
+
+            <!-- BOTÓN HACIA LA PLAY STORE -->
+            <ul class="actions" style="justify-content: center; margin-top: 2em;">
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.jordi_avicola.incubadora_pro" target="_blank" class="button primary icon brands fa-google-play" style="padding: 0.8em 2em; font-size: 1.1em;">
+                        Descargar en Google Play
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="copyright">
+                <li>&copy; Jordi Delgado Lucas</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- AQUI ESTÁ LA MAGIA: SOLO DEJAMOS JQUERY. CERO SCRIPTS DE STRATA -->
+    <script src="assets/js/jquery.min.js"></script>
+
+</body>
+</html>
